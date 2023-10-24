@@ -15,8 +15,8 @@ if(isset ($_POST['tinggi_badan'])){
     // silakan taruh code kalian di bawah
     
     // **********************  2  ************************** 
-    if(empty($tinggi_badan || $berat_badan)){
-        echo "Invalid";
+    if(empty($tinggi_badan) ||empty($berat_badan)){
+        $kosong = 'Inputan tidak boleh kosong';
     }
     else{
         // **********************  3  ************************** 
@@ -90,6 +90,9 @@ if(isset ($_POST['tinggi_badan'])){
                         echo "Hasil BMI adalah $hasil <br>";
                         echo 'Status BMI anda adalah Obese';
                     }
+                }
+                if (isset ($kosong)){
+                    echo $kosong;
                 }
                     ?>
                     <!--  **********************  4  **************************     -->
